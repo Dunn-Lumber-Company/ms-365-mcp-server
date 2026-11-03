@@ -1,0 +1,108 @@
+# =====================================================================
+# Dunn Lumber purchasing allowlist
+# Part A mirrors Claude's standard Microsoft 365 connector.
+# Part B adds the gap fillers: shared mailboxes and Microsoft To Do.
+# One exact tool name per line (^...$). Changes go through PR review.
+# =====================================================================
+
+# ---------- A1. Identity and people ----------
+^get-current-user$
+^list-relevant-people$
+^list-users$
+
+# ---------- A2. Own mailbox: read ----------
+^list-mail-messages$
+^list-mail-folder-messages$
+^get-mail-message$
+^list-mail-folders$
+^list-mail-child-folders$
+^list-mail-attachments$
+^get-mail-attachment-content$
+
+# ---------- A3. Own mailbox: drafts, organize ----------
+^create-draft-email$
+^create-reply-draft$
+^create-reply-all-draft$
+^create-forward-draft$
+^update-mail-message$
+^move-mail-message$
+^delete-mail-message$
+^list-outlook-categories$
+^create-outlook-category$
+
+# ---------- A4. Own mailbox: SEND (human approval required in Claude) ----------
+^send-draft-message$
+^send-mail$
+^forward-mail-message$
+
+# ---------- A5. Rules and automatic replies ----------
+^list-mail-rules$
+^create-mail-rule$
+^update-mail-rule$
+^delete-mail-rule$
+^get-mailbox-settings$
+^update-mailbox-settings$
+
+# ---------- A6. Calendar ----------
+^list-calendars$
+^list-calendar-events$
+^get-calendar-event$
+^get-calendar-view$
+^create-calendar-event$
+^update-calendar-event$
+^delete-calendar-event$
+^accept-calendar-event$
+^decline-calendar-event$
+^tentatively-accept-calendar-event$
+^find-meeting-times$
+^get-schedule$
+
+# ---------- A7. SharePoint and OneDrive ----------
+^search-query$
+^search-sharepoint-sites$
+^get-sharepoint-site$
+^list-sharepoint-site-drives$
+^get-drive-root-item$
+^get-drive-item$
+^list-folder-files$
+^copy-drive-item$
+^create-onedrive-folder$
+^move-rename-onedrive-item$
+^delete-onedrive-file$
+^upload-file-content$
+^create-upload-session$
+
+# ---------- A8. Teams ----------
+^list-chats$
+^list-chat-messages$
+^create-chat$
+^send-chat-message$
+^list-joined-teams$
+^list-team-channels$
+^list-channel-messages$
+^send-channel-message$
+^reply-to-channel-message$
+
+# ---------- B1. GAP: shared mailbox read ----------
+^list-shared-mailbox-messages$
+^list-shared-mailbox-folder-messages$
+^get-shared-mailbox-message$
+^list-shared-mailbox-folders$
+^list-shared-mailbox-child-folders$
+^list-shared-mailbox-attachments$
+^get-shared-mailbox-attachment-content$
+
+# ---------- B2. GAP: shared mailbox drafts only (human sends from Outlook) ----------
+^create-shared-mailbox-draft$
+^create-shared-mailbox-reply-draft$
+^create-shared-mailbox-reply-all-draft$
+
+# ---------- B3. GAP: Microsoft To Do (not Planner) ----------
+^list-todo-task-lists$
+^list-todo-tasks$
+^get-todo-task$
+^create-todo-task$
+^update-todo-task$
+^list-todo-checklist-items$
+^create-todo-checklist-item$
+^update-todo-checklist-item$
