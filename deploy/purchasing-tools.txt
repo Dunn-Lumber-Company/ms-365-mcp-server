@@ -1,0 +1,21 @@
+# Shared mailbox: read
+^list-shared-mailbox-messages$
+^list-shared-mailbox-folder-messages$
+^get-shared-mailbox-message$
+^list-shared-mailbox-folders$
+^list-shared-mailbox-child-folders$
+^list-shared-mailbox-attachments$
+^get-shared-mailbox-attachment-content$
+# Shared mailbox: drafts only (a human sends)
+^create-shared-mailbox-draft$
+^create-shared-mailbox-reply-draft$
+^create-shared-mailbox-reply-all-draft$
+# Microsoft To Do (not Planner)
+^list-todo-task-lists$
+^list-todo-tasks$
+^get-todo-task$
+^create-todo-task$
+^update-todo-task$
+^list-todo-checklist-items$
+^create-todo-checklist-item$
+^update-todo-checklist-item$
