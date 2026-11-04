@@ -19,5 +19,7 @@ COPY --from=builder /app/package*.json ./
 ENV NODE_ENV=production
 RUN npm ci --ignore-scripts --omit=dev
 
+COPY deploy/purchasing-tools.txt /app/deploy/purchasing-tools.txt
+
 USER node
 ENTRYPOINT ["node", "dist/index.js"]
